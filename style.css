@@ -66,6 +66,10 @@ body {
     border-radius: 7px;
 }
 
+.game-card img{
+    width: 100%;
+}
+
 .game-card:hover {
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
