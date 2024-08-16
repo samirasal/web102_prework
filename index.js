@@ -235,16 +235,22 @@ document.querySelectorAll('.fade-in').forEach(section => {
 });
 
 // JavaScript to animate stats numbers
-function animateValue(element, start, end, duration) {
+function animateValue(element, start, end, duration, prefix = '') {
   let startTimestamp = null;
+
   const step = (timestamp) => {
-    if (!startTimestamp) startTimestamp = timestamp;
-    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-    element.innerHTML = Math.floor(progress * (end - start) + start);
-    if (progress < 1) {
-      window.requestAnimationFrame(step);
-    }
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const currentValue = Math.floor(progress * (end - start) + start);
+
+      // Apply toLocaleString() and add the prefix if provided
+      element.innerHTML = `${prefix}${currentValue.toLocaleString()}`;
+
+      if (progress < 1) {
+          window.requestAnimationFrame(step);
+      }
   };
+
   window.requestAnimationFrame(step);
 }
 
@@ -252,4 +258,4 @@ const contributionsElement = document.getElementById('num-contributions');
 animateValue(contributionsElement, 0, totalContributions, 2000);
 
 const raisedElement = document.getElementById('total-raised');
-animateValue(raisedElement, 0, totalAmount, 2000);
+animateValue(raisedElement, 0, totalAmount, 2000, '$');

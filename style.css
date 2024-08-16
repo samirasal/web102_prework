@@ -1,15 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
 body {
-    font-family: 'Cabin';
+    font-family: 'Pirata One';
     background-color: #758190;
 }
+
+.pirata-one-regular {
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 #navbar {
     position: sticky;
     top: 0;
     background-color: #333;
     padding: 10px;
     z-index: 1000;
+    width: 100%;  
+    margin: 0;
+    left: 0;  
+    right: 0; 
+    box-sizing: border-box;
   }
 
   #navbar ul {
@@ -26,8 +38,9 @@ body {
   #navbar ul li a {
     color: white;
     text-decoration: none;
+    transition: 0.3s ease;
   }
-
+ 
   #navbar ul li a:hover {
     text-decoration: underline;
   }
@@ -71,6 +84,24 @@ body {
 #num-contributions, #total-raised, #num-games {
     font-size: 50px;
 }
+#search-bar {
+    display: flex;
+    justify-content: center;
+    height: 2.125rem;
+    padding: 0 2.25em;
+    font-size: 14px;
+    width: 15%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    margin-left: 40%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-align: center;
+    
+    
+  }
+
 
 #games-container {
     display: flex;
@@ -110,7 +141,9 @@ body {
 }
 
 button {
-    font-family: 'Cabin';
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
     border: none;
     padding: 1%;
     margin: 1%;
