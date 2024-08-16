@@ -259,3 +259,5 @@ animateValue(contributionsElement, 0, totalContributions, 2000);
 
 const raisedElement = document.getElementById('total-raised');
 animateValue(raisedElement, 0, totalAmount, 2000, '$');
+
+
