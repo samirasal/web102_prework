@@ -4,6 +4,33 @@ body {
     font-family: 'Cabin';
     background-color: #758190;
 }
+#navbar {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  #navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #navbar ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  #navbar ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  #navbar ul li a:hover {
+    text-decoration: underline;
+  }
 
 #tentacles {
     width: 50px;
@@ -64,6 +91,7 @@ body {
     width: 300px;
     text-align: center;
     border-radius: 7px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .game-card img{
@@ -73,6 +101,8 @@ body {
 .game-card:hover {
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #button-container {
@@ -90,3 +120,14 @@ button:hover{
     background-color: black;
     color: white;
 }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }

@@ -1,3 +1,4 @@
+
 /*****************************************************************************
  * Challenge 2: Review the provided code. The provided code includes:
  * -> Statements that import data from games.js
@@ -22,7 +23,20 @@ function deleteChildElements(parent) {
  * Challenge 3: Add data about each game as a card to the games-container
  * Skills used: DOM manipulation, for loops, template literals, functions
 */
-
+const searchBar = document.getElementById('search-bar');
+searchBar.addEventListener('input', function() {
+  const searchTerm = searchBar.value.toLowerCase();
+  const gameCards = gamesContainer.getElementsByClassName('game-card');
+  
+  Array.from(gameCards).forEach((card) => {
+    const title = card.querySelector('h3').textContent.toLowerCase();
+    if (title.includes(searchTerm)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});
 // grab the element with the id games-container
 const gamesContainer = document.getElementById("games-container");
 
@@ -198,3 +212,44 @@ firstGameContainer.appendChild(topGameElement);
 const secondGameElement = document.createElement("p");
 secondGameElement.textContent = secondTopGame.name;
 secondGameContainer.appendChild(secondGameElement);
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+document.querySelectorAll('.fade-in').forEach(section => {
+  observer.observe(section);
+});
+
+// JavaScript to animate stats numbers
+function animateValue(element, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    element.innerHTML = Math.floor(progress * (end - start) + start);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
+const contributionsElement = document.getElementById('num-contributions');
+animateValue(contributionsElement, 0, totalContributions, 2000);
+
+const raisedElement = document.getElementById('total-raised');
+animateValue(raisedElement, 0, totalAmount, 2000);
