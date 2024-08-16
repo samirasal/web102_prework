@@ -157,9 +157,16 @@ document.getElementById("all-btn").addEventListener("click", showAllGames);
  * Challenge 6: Add more information at the top of the page about the company.
  * Skills used: template literals, ternary operator
 */
+const unfundedGames = GAMES_JSON.filter((game) => game.pledged < game.goal).length;
+
+const displayStr = `A total of $${totalAmount.toLocaleString()} has been raised for ${totalGames} game${totalGames > 1 ? 's' : ''}. Currently, ${unfundedGames} game${unfundedGames !== 1 ? 's' : ''} remain${unfundedGames !== 1 ? '' : 's'} unfunded. We need your help to fund these amazing game${totalGames > 1 ? 's' : ''}!`;
+console.log(displayStr);
 
 // grab the description container
 const descriptionContainer = document.getElementById("description-container");
+const newParagraph = document.createElement('p');
+newParagraph.textContent = displayStr;
+descriptionContainer.appendChild(newParagraph);
 
 // use filter or reduce to count the number of unfunded games
 
