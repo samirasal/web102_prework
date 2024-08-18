@@ -261,3 +261,23 @@ const raisedElement = document.getElementById('total-raised');
 animateValue(raisedElement, 0, totalAmount, 2000, '$');
 
 
+// Function to show a toast message
+function showToast(message) {
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  toast.style.display = 'block';
+  
+  // Hide the toast after 3 seconds
+  setTimeout(() => {
+      toast.style.display = 'none';
+      document.body.removeChild(toast);
+  }, 3000);
+}
+
+// Add event listener to the toast button
+const toastButton = document.getElementById('toast-button');
+toastButton.addEventListener('click', () => {
+  showToast('This is a toast for appreciation for the developers!');
+});
