@@ -1,10 +1,10 @@
-# WEB102 Prework - *Name of App Here*
+# WEB102 Prework - *Masariseas*
 
-Submitted by: **Your Name Here**
+Submitted by: **Samira Salifu**
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**Masariseas** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **X** hours spent in total
+Time spent: **35** hours spent in total
 
 ## Required Features
 
@@ -16,17 +16,20 @@ The following **required** functionality is completed:
 * [ ] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 The following **optional** features are implemented:
-
-* [ ] List anything else that you can get done to improve the app functionality!
+* [ ] Animated the stats numbers by incrementally updating the numerical values  from zero to their final values.
+* [ ]  The functionality that when a user clicks on an anchor link, the page scrolls smoothly to the target section instead of jumping abruptly.
+* [ ]   Intersection Observer to detect when elements come into view
+* [ ]   Created a fade-in effect to work with the intersection observer where each section with the class fade-in would be invisible or styled differently until it scrolls into view, at which point the visible class is added to make it fade in or change style.
+  
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='C:\Users\samira.salifu\web102_prework\assets\masariseas.gif title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with convertico.co
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -35,10 +38,10 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
-
+* [ ] I had trouble when implementing the additional features especially animating the stats numbers. I first attempted to use math functions since the value increases from 0 to the final value and then failed. Then I read on geeksforgeeks.org and MDN docs (just to mention a few) on how to approach this and I was able to seek guidance on how to implement this feature. It was tasking since I had never made this feature and almost didn't implement it but pulled through in the end.I would say implementing this function took me 2 days of trial and error to get it to work correctly.
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2024] [Samira Salifu]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
