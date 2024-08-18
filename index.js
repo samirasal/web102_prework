@@ -279,5 +279,5 @@ function showToast(message) {
 // Add event listener to the toast button
 const toastButton = document.getElementById('toast-button');
 toastButton.addEventListener('click', () => {
-  showToast('This is a toast for appreciation for the developers!');
+  showToast('This is a toast of appreciation for the developers!');
 });
