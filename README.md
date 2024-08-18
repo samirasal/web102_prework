@@ -38,7 +38,7 @@ GIF created with convertico.co
 ## Notes
 
 Describe any challenges encountered while building the app.
-* [x] I had trouble when implementing the additional features especially animating the stats numbers. I first attempted to use math functions since the value increases from 0 to the final value and then failed. Then I read on geeksforgeeks.org and MDN docs (just to mention a few) on how to approach this and I was able to seek guidance on how to implement this feature. It was tasking since I had never made this feature and almost didn't implement it but pulled through in the end.I would say implementing this function took me 2 days of trial and error to get it to work correctly.
+* [x] I had trouble when implementing the additional features especially animating the stats numbers. I first attempted to use math functions since the value increases from 0 to the final value and then failed. Then I read on geeksforgeeks.org and MDN docs (just to mention a few) on how to approach this and I was able to seek guidance on how to implement this feature using a timestamp. It was tasking since I had never made this feature and almost didn't implement it but pulled through in the end.I would say implementing this function took me 2 days of trial and error to get it to work correctly.
 ## License
 
     Copyright [2024] [Samira Salifu]
