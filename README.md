@@ -26,10 +26,10 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='C:\Users\samira.salifu\web102_prework\assets\masariseas.gif title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/CPg4jvJ' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with convertico.co
+GIF created with LiceCap
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
