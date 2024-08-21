@@ -213,6 +213,7 @@ const secondGameElement = document.createElement("p");
 secondGameElement.textContent = secondTopGame.name;
 secondGameContainer.appendChild(secondGameElement);
 
+//Anchor link function
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
